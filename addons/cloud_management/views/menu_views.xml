@@ -1,9 +1,38 @@
 <odoo>
-    <menuitem id="cloud_management_main_menu" name="Cloud Management" sequence="1"/>
+    <!-- Menú Principal -->
+    <menuitem id="menu_cloud_management_root"
+              name="Cloud Management"
+              sequence="1"
+              action=""
+              parent="base.menu_custom"/>
 
-    <menuitem id="cloudpoweback_menu" name="Cloud Poweback" parent="cloud_management_main_menu" action="cloudpoweback_action"/>
-    <menuitem id="solucion_menu" name="Soluciones" parent="cloud_management_main_menu" action="solucion_action"/>
-    <menuitem id="data_center_menu" name="Data Center" parent="cloud_management_main_menu" action="data_center_action"/>
-    <menuitem id="sla_menu" name="SLA" parent="cloud_management_main_menu" action="sla_action"/>
-    <menuitem id="tipo_pago_menu" name="Tipo de Pagos" parent="cloud_management_main_menu" action="tipo_pago_action"/>
+    <!-- Menú para Data Center -->
+    <menuitem id="menu_data_center"
+              name="Data Center"
+              parent="menu_cloud_management_root"
+              action="action_data_center"/>
+
+    <!-- Menú para SLA -->
+    <menuitem id="menu_sla"
+              name="SLA"
+              parent="menu_cloud_management_root"
+              action="action_sla"/>
+
+    <!-- Menú para Tipo de Pagos -->
+    <menuitem id="menu_payment_type"
+              name="Tipo de Pagos"
+              parent="menu_cloud_management_root"
+              action="action_payment_type"/>
+
+    <!-- Menú para Cloud Powerback -->
+    <menuitem id="menu_cloud_powerback"
+              name="Cloud Powerback"
+              parent="menu_cloud_management_root"
+              action="action_cloud_powerback"/>
+
+    <!-- Menú para Soluciones -->
+    <menuitem id="menu_solution"
+              name="Soluciones"
+              parent="menu_cloud_management_root"
+              action="action_solution"/>
 </odoo>
