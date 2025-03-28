@@ -3,7 +3,7 @@
         <field name="name">cloud.powerback.form</field>
         <field name="model">cloud.powerback</field>
         <field name="arch" type="xml">
-            <form string="Cloud Powerback">
+            <form>
                 <group>
                     <field name="name"/>
                     <field name="capacity"/>
@@ -18,7 +18,7 @@
         <field name="name">cloud.powerback.tree</field>
         <field name="model">cloud.powerback</field>
         <field name="arch" type="xml">
-            <tree string="Cloud Powerback">
+            <tree>
                 <field name="name"/>
                 <field name="capacity"/>
                 <field name="price"/>
@@ -26,10 +26,8 @@
         </field>
     </record>
 
-    <menuitem id="menu_cloud_powerback" name="Cloud Powerback" parent="base.menu_management" sequence="4" action="action_cloud_powerback"/>
-    <record id="action_cloud_powerback" model="ir.actions.act_window">
-        <field name="name">Cloud Powerback</field>
-        <field name="res_model">cloud.powerback</field>
-        <field name="view_mode">tree,form</field>
-    </record>
+    <menuitem id="menu_cloud_powerback" name="Cloud PowerBack" parent="base.menu_custom" sequence="40"/>
+    <menuitem id="menu_cloud_powerback_main" name="Cloud PowerBack" parent="menu_cloud_powerback"/>
+    <act_window id="action_cloud_powerback" name="Cloud PowerBack" res_model="cloud.powerback" view_mode="tree,form"/>
+    <menuitem id="menu_cloud_powerback_action" name="Manage Cloud PowerBack" parent="menu_cloud_powerback_main" action="action_cloud_powerback"/>
 </odoo>

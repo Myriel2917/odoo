@@ -3,7 +3,7 @@
         <field name="name">solution.form</field>
         <field name="model">solution</field>
         <field name="arch" type="xml">
-            <form string="Solución">
+            <form>
                 <group>
                     <field name="name"/>
                     <field name="capacity"/>
@@ -18,7 +18,7 @@
         <field name="name">solution.tree</field>
         <field name="model">solution</field>
         <field name="arch" type="xml">
-            <tree string="Soluciones">
+            <tree>
                 <field name="name"/>
                 <field name="capacity"/>
                 <field name="price"/>
@@ -26,10 +26,8 @@
         </field>
     </record>
 
-    <menuitem id="menu_solution" name="Soluciones" parent="base.menu_management" sequence="5" action="action_solution"/>
-    <record id="action_solution" model="ir.actions.act_window">
-        <field name="name">Soluciones</field>
-        <field name="res_model">solution</field>
-        <field name="view_mode">tree,form</field>
-    </record>
+    <menuitem id="menu_solution" name="Solución" parent="base.menu_custom" sequence="50"/>
+    <menuitem id="menu_solution_main" name="Soluciones" parent="menu_solution"/>
+    <act_window id="action_solution" name="Solution" res_model="solution" view_mode="tree,form"/>
+    <menuitem id="menu_solution_action" name="Manage Solutions" parent="menu_solution_main" action="action_solution"/>
 </odoo>

@@ -1,17 +1,17 @@
 {
     'name': 'Cloud Management',
     'version': '1.0',
-    'author': 'Alondra Gutierrez',
-    'category': 'Management',
-    'summary': 'Gestiona información de Data Centers, SLA, Pagos, Cloud y Soluciones',
+    'category': 'Custom',
+    'summary': 'Manage Cloud PowerBack and Solutions',
     'description': """
-        Este módulo permite gestionar información de:
-        - Data Centers
-        - SLA (Service Level Agreement)
-        - Tipos de Pagos
-        - Cloud Powerback
-        - Soluciones
+        Cloud Management Module
+        - Manage Data Centers
+        - Manage SLA
+        - Manage Payment Types
+        - Manage Cloud PowerBack
+        - Manage Solutions
     """,
+    'author': 'Alondra Gutierrez',
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
