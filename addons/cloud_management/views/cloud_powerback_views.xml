@@ -1,0 +1,35 @@
+<odoo>
+    <record id="view_cloud_powerback_form" model="ir.ui.view">
+        <field name="name">cloud.powerback.form</field>
+        <field name="model">cloud.powerback</field>
+        <field name="arch" type="xml">
+            <form string="Cloud Powerback">
+                <group>
+                    <field name="name"/>
+                    <field name="capacity"/>
+                    <field name="description"/>
+                    <field name="price"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_cloud_powerback_tree" model="ir.ui.view">
+        <field name="name">cloud.powerback.tree</field>
+        <field name="model">cloud.powerback</field>
+        <field name="arch" type="xml">
+            <tree string="Cloud Powerback">
+                <field name="name"/>
+                <field name="capacity"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="menu_cloud_powerback" name="Cloud Powerback" parent="base.menu_management" sequence="4" action="action_cloud_powerback"/>
+    <record id="action_cloud_powerback" model="ir.actions.act_window">
+        <field name="name">Cloud Powerback</field>
+        <field name="res_model">cloud.powerback</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

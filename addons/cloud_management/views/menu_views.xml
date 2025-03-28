@@ -1,0 +1,9 @@
+<odoo>
+    <menuitem id="cloud_management_main_menu" name="Cloud Management" sequence="1"/>
+
+    <menuitem id="cloudpoweback_menu" name="Cloud Poweback" parent="cloud_management_main_menu" action="cloudpoweback_action"/>
+    <menuitem id="solucion_menu" name="Soluciones" parent="cloud_management_main_menu" action="solucion_action"/>
+    <menuitem id="data_center_menu" name="Data Center" parent="cloud_management_main_menu" action="data_center_action"/>
+    <menuitem id="sla_menu" name="SLA" parent="cloud_management_main_menu" action="sla_action"/>
+    <menuitem id="tipo_pago_menu" name="Tipo de Pagos" parent="cloud_management_main_menu" action="tipo_pago_action"/>
+</odoo>

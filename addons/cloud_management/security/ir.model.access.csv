@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_data_center,access_data_center,model_data_center,base.group_user,1,1,1,1
+access_sla,access_sla,model_sla,base.group_user,1,1,1,1
+access_payment_type,access_payment_type,model_payment_type,base.group_user,1,1,1,1
+access_cloud_powerback,access_cloud_powerback,model_cloud_powerback,base.group_user,1,1,1,1
+access_solution,access_solution,model_solution,base.group_user,1,1,1,1

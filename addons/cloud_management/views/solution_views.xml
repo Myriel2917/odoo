@@ -1,0 +1,35 @@
+<odoo>
+    <record id="view_solution_form" model="ir.ui.view">
+        <field name="name">solution.form</field>
+        <field name="model">solution</field>
+        <field name="arch" type="xml">
+            <form string="Solución">
+                <group>
+                    <field name="name"/>
+                    <field name="capacity"/>
+                    <field name="description"/>
+                    <field name="price"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_solution_tree" model="ir.ui.view">
+        <field name="name">solution.tree</field>
+        <field name="model">solution</field>
+        <field name="arch" type="xml">
+            <tree string="Soluciones">
+                <field name="name"/>
+                <field name="capacity"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="menu_solution" name="Soluciones" parent="base.menu_management" sequence="5" action="action_solution"/>
+    <record id="action_solution" model="ir.actions.act_window">
+        <field name="name">Soluciones</field>
+        <field name="res_model">solution</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

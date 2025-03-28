@@ -1,0 +1,33 @@
+<odoo>
+    <record id="view_data_center_form" model="ir.ui.view">
+        <field name="name">data.center.form</field>
+        <field name="model">data.center</field>
+        <field name="arch" type="xml">
+            <form string="Data Center">
+                <group>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="price"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_data_center_tree" model="ir.ui.view">
+        <field name="name">data.center.tree</field>
+        <field name="model">data.center</field>
+        <field name="arch" type="xml">
+            <tree string="Data Centers">
+                <field name="name"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="menu_data_center" name="Data Centers" parent="base.menu_management" sequence="1" action="action_data_center"/>
+    <record id="action_data_center" model="ir.actions.act_window">
+        <field name="name">Data Centers</field>
+        <field name="res_model">data.center</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
